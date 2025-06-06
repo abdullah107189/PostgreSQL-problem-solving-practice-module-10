@@ -71,3 +71,9 @@ INSERT INTO course_enrollments (student_id, course_title, enrolled_on) VALUES
 SELECT * FROM students;
 SELECT * FROM departments;
 SELECT * FROM course_enrollments;
+
+
+-- Retrieve all students who scored higher than the average score.
+SELECT * FROM students
+    WHERE score > (SELECT avg(score) FROM students);
+    
