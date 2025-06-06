@@ -77,3 +77,6 @@ SELECT * FROM course_enrollments;
 SELECT * FROM students
     WHERE score > (SELECT avg(score) FROM students);
     
+-- Find students whose age is greater than the average age of all students.
+SELECT * FROM students
+    WHERE age > (SELECT avg(age) from students);
